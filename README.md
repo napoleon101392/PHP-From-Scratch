@@ -1,4 +1,4 @@
-### PHP From Scratch
+### PHP From Scratch :fire:
 
 Lets build the structure from scratch. This might be a small structure
 but we will learn also the basics and good practises in PHP.
