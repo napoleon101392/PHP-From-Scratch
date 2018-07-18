@@ -17,3 +17,21 @@ if (! function_exists("dd")) {
 		exit;
 	}
 }
+
+if(! function_exists("config")) {
+	function config($file)
+	{
+		return require_once("config/{$file}.php");
+	}
+}
+
+if(! function_exists("error")) {
+	function error($message)
+	{
+		if (!config('app')['error']) {
+			return view('errors/404.php');
+		}
+
+		return $message;
+	}
+}

@@ -8,6 +8,8 @@ class UserController
 {
 	public function index()
 	{
-		return view('user/index.php', ['users' => (new User)->all()]);
+		$users = new User;
+
+		return view('user/index.php', ['users' => $users->all()]);
 	}
 }
