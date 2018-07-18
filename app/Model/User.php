@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use App\DatabaseConnection;
+use App\Database\DatabaseQuery;
 
 class User
 {
@@ -10,7 +10,7 @@ class User
 
 	public function __construct()
 	{
-		$this->db = new DatabaseConnection();
+		$this->db = new DatabaseQuery();
 	}
 
 	public function all()
