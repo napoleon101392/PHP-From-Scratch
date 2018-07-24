@@ -1,8 +1,12 @@
 <?php
 
 if (!function_exists("view")) {
-	function view($path, $compact = [])
+	function view($path, ...$variables)
 	{
+		foreach($variables as $var) {
+			extract($var);
+		}
+		
 		return require __DIR__ . "/resources/views/{$path}";
 	}
 }
